@@ -25,6 +25,7 @@ class Error(Base):
     Fecha_open = Column(String(16))
     Fecha_envio = Column(String(16))
     Fecha_click = Column(String(16))
+    causa = Column(String(25))
 
     def __init__(
         self,
@@ -43,6 +44,7 @@ class Error(Base):
         IPs: str,
         Navegadores: str,
         Plataformas: str,
+        causa: str
     ):
         self.email = email if not email == "null" else None
         self.Navegadores = Navegadores if not Navegadores == "null" else None
@@ -59,6 +61,7 @@ class Error(Base):
         self.Fecha_open = Fecha_open if not Fecha_open == "null" else None
         self.Fecha_envio = Fecha_envio if not Fecha_envio == "null" else None
         self.Fecha_click = Fecha_click if not Fecha_click == "null" else None
+        self.causa = causa
 
     def saveRecord(self):
         db = DbConection()

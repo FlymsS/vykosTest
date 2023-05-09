@@ -48,14 +48,14 @@ class Cleaning:
 
     def cleanFile(self):
         self.cleanEmail()
-        self.verifyDateFechaAbierto()
         self.verifyDateFechaSend()
+        self.verifyDateFechaAbierto()
         
         self.invalidTotal = self.invalidEmail + self.invalidDate + self.invalidDate2
         
         self.validTotal = self.dateFilteredDF.shape[0]
 
-    def verifyDateFechaAbierto(self):
+    def verifyDateFechaSend(self):
         dfAux = self.emailFilteredDF.copy()
         dfAux["fecha_valida"] = pd.to_datetime(
             self.emailFilteredDF["Fecha envio"], format='%d/%m/%Y %H:%M', errors='coerce')
@@ -63,7 +63,7 @@ class Cleaning:
         self.invalidDateDF1 = self.emailFilteredDF[dfAux['fecha_valida'].isna()]
         self.invalidDate = self.invalidDateDF1.shape[0]
 
-    def verifyDateFechaSend(self):
+    def verifyDateFechaAbierto(self):
         dfAux = self.dateFilteredDF.copy()
         dfAux2 = self.dateFilteredDF.copy()
         dfAux["fecha_valida"] = pd.to_datetime(
@@ -118,13 +118,16 @@ class Cleaning:
         return f"Bitacora de {monthStr} {year} - Creada {datetime.now().strftime('%Y-%m-%d %H:%M')} - "
 
     def saveInDB(self):
-        self.saveVisitsInDB()
-        self.saveStatisticsInDB()
-        self.saveErrorsInDB(self.invalidEmailDF)
+        if self.dateFilteredDF.shape[0] > 0:
+            self.saveVisitsInDB()
+        if self.dateFilteredDF.shape[0] > 0:
+            self.saveStatisticsInDB()
+        if self.invalidEmailDF.shape[0] > 0:
+            self.saveErrorsInDB(self.invalidEmailDF, "email invalido")
         if self.invalidDateDF1.shape[0] > 0:
-            self.saveErrorsInDB(self.invalidDateDF1)
+            self.saveErrorsInDB(self.invalidDateDF1, "Fecha_envio invalida")
         if self.invalidDateDF2.shape[0] > 0:
-            self.saveErrorsInDB(self.invalidDateDF2)
+            self.saveErrorsInDB(self.invalidDateDF2, "Fecha_open invalida")
 
     def saveStatisticsInDB(self):
         jyv = self.checkJyv(self.dateFilteredDF)
@@ -147,7 +150,7 @@ class Cleaning:
                 row["Plataformas"])
             statistics.saveRecord()
 
-    def saveErrorsInDB(self, df: pd.DataFrame):
+    def saveErrorsInDB(self, df: pd.DataFrame, cause: str):
         jyv = self.checkJyv(df)
         for index, row in df.iterrows():
             error = Error(
@@ -165,7 +168,9 @@ class Cleaning:
                 row["Links"],
                 row["IPs"],
                 row["Navegadores"],
-                row["Plataformas"])
+                row["Plataformas"],
+                cause
+                )
             error.saveRecord()
 
     def checkJyv(self, df: pd.DataFrame):
@@ -189,6 +194,7 @@ class Cleaning:
                 f"{datetime.now().strftime('%Y-%m-%d %H:%M')} - {aux[-1]} - No se pudo guardar en la base de datos, revisar el archivo \n")
 
 def fileSelection():
+    print("cleaning files ...")
     for file in os.listdir(path):
         fileInCleaning = Cleaning(file)
         fileInCleaning.cleanFile()

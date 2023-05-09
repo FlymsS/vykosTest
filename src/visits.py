@@ -77,6 +77,9 @@ class Visits(Base):
         isThisYear = self.verifyVisitsActualYear(row[4])
         if isThisYear:
             self.verifyVisitsActualMonth(row[5])
+        else:
+            self.visitasAnioActual = 1
+            self.visitasMesActual = 1
         self.verifyLastvisit(auxDate)
 
     def verifyLastvisit(self, auxDate):
@@ -97,3 +100,5 @@ class Visits(Base):
         currentMonth = datetime.strptime(self.fechaPrimeraVisita, '%d/%m/%Y %H:%M').month
         if registeredMonth == currentMonth:
             self.visitasMesActual = visitsThisMonth +1
+        else:
+            self.visitasMesActual = 1
