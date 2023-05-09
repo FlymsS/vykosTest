@@ -1,9 +1,9 @@
-#sftp -i ./clavessh user@8.8.8.8:/home/vinkOS/archivosVisitas <<EOF
-#get report*.txt ./uncleanedFiles
-#rm report*.txt
-#EOF
+sftp -i ./clavessh user@8.8.8.8:/home/vinkOS/archivosVisitas <<EOF
+get report*.txt ./uncleanedFiles
+rm report*.txt
+EOF
 
-#exit
+exit
 
 python3 ./src/cleaning.py
 
