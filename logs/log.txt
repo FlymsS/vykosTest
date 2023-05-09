@@ -1,103 +1,19 @@
-Bitacora de May 2023 - Creada 2023-05-08 20:52 - 
-2023-05-08 20:52 - report_7.txt
+Bitacora de May 2023 - Creada 2023-05-09 00:21 - 
+2023-05-09 00:21 - report_7.txt
 	 Registros totales: 503            
 	 Registros invalidos por email: 0             
 	 Registros invalidos por fecha de envio: 0             
 	 Registros invalidos por fecha de apertura: 393             
 	 Total de registros invalidos: 393             
 	 Total de registros validos: 110
-2023-05-08 20:52 - report_8.txt
+2023-05-09 00:21 - report_8.txt
 	 Registros totales: 503            
 	 Registros invalidos por email: 0             
 	 Registros invalidos por fecha de envio: 0             
 	 Registros invalidos por fecha de apertura: 388             
 	 Total de registros invalidos: 388             
 	 Total de registros validos: 115
-2023-05-08 20:53 - report_9.txt
-	 Registros totales: 995            
-	 Registros invalidos por email: 0             
-	 Registros invalidos por fecha de envio: 0             
-	 Registros invalidos por fecha de apertura: 839             
-	 Total de registros invalidos: 839             
-	 Total de registros validos: 156
-2023-05-08 23:33 - report_7.txt
-	 Registros totales: 503            
-	 Registros invalidos por email: 0             
-	 Registros invalidos por fecha de envio: 0             
-	 Registros invalidos por fecha de apertura: 393             
-	 Total de registros invalidos: 393             
-	 Total de registros validos: 110
-2023-05-08 23:34 - report_8.txt
-	 Registros totales: 503            
-	 Registros invalidos por email: 0             
-	 Registros invalidos por fecha de envio: 0             
-	 Registros invalidos por fecha de apertura: 388             
-	 Total de registros invalidos: 388             
-	 Total de registros validos: 115
-2023-05-08 23:34 - report_9.txt
-	 Registros totales: 995            
-	 Registros invalidos por email: 0             
-	 Registros invalidos por fecha de envio: 0             
-	 Registros invalidos por fecha de apertura: 839             
-	 Total de registros invalidos: 839             
-	 Total de registros validos: 156
-2023-05-08 23:39 - report_7.txt
-	 Registros totales: 503            
-	 Registros invalidos por email: 0             
-	 Registros invalidos por fecha de envio: 393             
-	 Registros invalidos por fecha de apertura: 0             
-	 Total de registros invalidos: 393             
-	 Total de registros validos: 110
-2023-05-08 23:39 - report_8.txt
-	 Registros totales: 503            
-	 Registros invalidos por email: 0             
-	 Registros invalidos por fecha de envio: 388             
-	 Registros invalidos por fecha de apertura: 0             
-	 Total de registros invalidos: 388             
-	 Total de registros validos: 115
-2023-05-08 23:39 - report_9.txt
-	 Registros totales: 995            
-	 Registros invalidos por email: 0             
-	 Registros invalidos por fecha de envio: 839             
-	 Registros invalidos por fecha de apertura: 0             
-	 Total de registros invalidos: 839             
-	 Total de registros validos: 156
-2023-05-08 23:44 - report_7.txt
-	 Registros totales: 503            
-	 Registros invalidos por email: 0             
-	 Registros invalidos por fecha de envio: 0             
-	 Registros invalidos por fecha de apertura: 393             
-	 Total de registros invalidos: 393             
-	 Total de registros validos: 110
-2023-05-08 23:44 - report_8.txt
-	 Registros totales: 503            
-	 Registros invalidos por email: 0             
-	 Registros invalidos por fecha de envio: 0             
-	 Registros invalidos por fecha de apertura: 388             
-	 Total de registros invalidos: 388             
-	 Total de registros validos: 115
-2023-05-08 23:45 - report_9.txt
-	 Registros totales: 995            
-	 Registros invalidos por email: 0             
-	 Registros invalidos por fecha de envio: 0             
-	 Registros invalidos por fecha de apertura: 839             
-	 Total de registros invalidos: 839             
-	 Total de registros validos: 156
-2023-05-08 23:48 - report_7.txt
-	 Registros totales: 503            
-	 Registros invalidos por email: 0             
-	 Registros invalidos por fecha de envio: 0             
-	 Registros invalidos por fecha de apertura: 393             
-	 Total de registros invalidos: 393             
-	 Total de registros validos: 110
-2023-05-08 23:48 - report_8.txt
-	 Registros totales: 503            
-	 Registros invalidos por email: 0             
-	 Registros invalidos por fecha de envio: 0             
-	 Registros invalidos por fecha de apertura: 388             
-	 Total de registros invalidos: 388             
-	 Total de registros validos: 115
-2023-05-08 23:48 - report_9.txt
+2023-05-09 00:22 - report_9.txt
 	 Registros totales: 995            
 	 Registros invalidos por email: 0             
 	 Registros invalidos por fecha de envio: 0             
